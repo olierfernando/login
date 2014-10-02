@@ -1,0 +1,7 @@
+<% if currrent_user %>
+<%=link_to "Edit profile", edit_user_path(currrent_user.id) %>
+<%=link_to "logout", :logout, method: :get %>
+<% else %>
+<%=link_to "Register", new_user_path %> |
+<%=link_to "Login", :login %>
+<% end %>
